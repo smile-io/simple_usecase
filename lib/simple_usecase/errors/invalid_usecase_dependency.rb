@@ -1,0 +1,1 @@
+class InvalidUsecaseDependency < StandardError; end;
