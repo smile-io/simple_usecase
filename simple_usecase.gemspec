@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["awillemsma@sweettoothhq.com"]
   spec.summary       = %q{Simple mixin interfaces for nestable UseCase classes}
   # spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/sweettooth/simple_usecase"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")

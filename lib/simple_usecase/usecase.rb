@@ -7,11 +7,14 @@ module SimpleUsecase
         new(*args, auth_context).call(&block)
       end
 
-      attr_accessor :form, :model, :auth_context
+      attr_accessor :auth_context
     end
 
     def initialize(*args, auth_context)
       self.auth_context = auth_context
+    end
+
+    def call
     end
   end
 end
