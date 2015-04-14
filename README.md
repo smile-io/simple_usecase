@@ -99,7 +99,7 @@ steps. Those steps are
 2. *Commit!* The commit step is where the core action of the Usecase is
    designed to take place, e.g. saving records to the database. Dependent
    Usecases will have their commit steps run within a database transaction, if
-   supported.
+   supported (Currently supported only for ActiveRecord, but easy to expand).
 3. *After Commit* Supporting or clean-up steps that should happen after the 
    commit step has been successfully completed. As an example, queuing further
    processing of records that were created in the commit! step.
