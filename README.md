@@ -141,4 +141,4 @@ commented and quite straight forward.
 
 ## License
 
-Simple Usecase is released under the [MIT License](./LICENCE.txt).
+Simple Usecase is released under the [MIT License](./LICENSE.txt).
