@@ -10,10 +10,6 @@ module SimpleUsecase
   module Preparable
     extend ActiveSupport::Concern
 
-    included do
-      attr_accessor :form, :model 
-    end
-    
     # The primary difference is that use-cases using this mixin will define a
     # 'prepare' method, rather than a 'call' method. Prepare is responsible
     # for doing most of the work of the UseCase, including validating

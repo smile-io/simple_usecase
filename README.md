@@ -3,6 +3,12 @@
 Simple Usecase provides a simple yet effective interface for writing
 composable, "UseCase" classes that make up an application's domain logic.
 
+*Note on Terms:* Throughout this document, the convention of using periods and hash
+symbols to designate class and instance level methods, respectively, will be
+used. E.g. `#call` is an instance level method named "call". `.call` is a
+class level method.
+method 
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -39,7 +45,7 @@ object, (if using Rails with Devise, it might well be the result of calling
 which case the authentication_context is always considered the _last_
 parameter.
 
-Within a Usecase instance, a public accesser "auth_context" gives access to the
+Within a Usecase instance, a public accesser `#auth_context` gives access to the
 authenticated context.
 
 Once instantiated, a Usecase object performs it's operations within a `#call`
@@ -115,7 +121,7 @@ include SimpleUsecase::All
 
 To get the best use out of the Preparable interface, perform as much of your
 logic as you can in the `#prepare` method. By default, the Preparable interface
-makes avaialbe a `#model` accessor, and will, by default try to call #save! on 
+makes avaialbe a `#model` accessor, and will, by default try to call `#save!` on 
 any object stored in it when the commit step is reached. To over-ride this
 behavior, define a method `#commit_within_transaction!` with
 your own commit logic. Also consider redefining the `after_commit` method to
